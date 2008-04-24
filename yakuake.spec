@@ -9,6 +9,8 @@ Url:		http://www.kde-apps.org/content/show.php?content=29153
 BuildRequires:	kdelibs4-devel
 Requires:       konsole
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Obsoletes:      kde4-%name <= 2.9.2
+Provides:       kde4-%name = %version
 
 %description
 Yakuake is a Quake-style terminal emulator based on KDE Konsole technology.
