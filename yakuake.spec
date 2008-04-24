@@ -1,15 +1,13 @@
-%define origname yakuake
-
 Summary:	Very powerful Quake style Konsole
-Name:		kde4-%origname
+Name:		yakuake
 Version:	2.9.2
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Source:		http://download.berlios.de/%{name}/%{origname}-%{version}.tar.bz2
+Source:		http://download.berlios.de/%{name}/%{name}-%{version}.tar.bz2
 Url:		http://www.kde-apps.org/content/show.php?content=29153
 BuildRequires:	kdelibs4-devel
-Requires:       kde4-konsole
+Requires:       konsole
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -23,19 +21,19 @@ Yakuake is a Quake-style terminal emulator based on KDE Konsole technology.
 %{clean_menus}
 %clean_icon_cache hicolor
 
-%files -f %{origname}.lang
+%files -f %{name}.lang
 %defattr(-,root,root,-)
 %doc AUTHORS ChangeLog README TODO NEWS KDE4FAQ
 %{_kde_bindir}/*
 %{_kde_datadir}/applications/kde4/*.desktop
-%{_kde_appsdir}/%{origname}
+%{_kde_appsdir}/%{name}
 %{_kde_iconsdir}/hicolor/*/apps/*
 
 
 #--------------------------------------------------------------------
 
 %prep 
-%setup -qn %{origname}-%{version}
+%setup -qn %{name}-%{version}
 
 %build
 %cmake_kde4
@@ -47,7 +45,7 @@ cd build
 %makeinstall_std
 cd -
 
-%find_lang %origname
+%find_lang %name
 
 %clean 
 rm -rf %{buildroot} 
