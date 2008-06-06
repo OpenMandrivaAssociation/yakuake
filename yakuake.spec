@@ -1,7 +1,7 @@
 Summary:	Very powerful Quake style Konsole
 Name:		yakuake
 Version:	2.9.3
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Source:		http://download.berlios.de/%{name}/%{name}-%{version}.tar.bz2
@@ -31,13 +31,13 @@ Yakuake is a Quake-style terminal emulator based on KDE Konsole technology.
 %{_kde_appsdir}/%{name}
 %{_kde_iconsdir}/hicolor/*/apps/*
 
-
 #--------------------------------------------------------------------
 
 %prep 
 %setup -qn %{name}-%{version}
 
 %build
+LDFLAGS="$LDFLAGS -Wl,--as-needed -Wl,--no-undefined"; export LDFLAGS ; 
 %cmake_kde4
 %make
 
