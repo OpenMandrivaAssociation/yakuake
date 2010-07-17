@@ -1,6 +1,6 @@
 Summary:	    Very powerful Quake style Konsole
 Name:		    yakuake
-Version:	    2.9.6
+Version:	    2.9.7
 Release:	    %mkrel 1
 License:	    GPLv2+
 Group:		    Graphical desktop/KDE
