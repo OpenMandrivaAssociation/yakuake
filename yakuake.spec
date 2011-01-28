@@ -1,10 +1,10 @@
 Summary:	    Very powerful Quake style Konsole
 Name:		    yakuake
-Version:	    2.9.7
+Version:	    2.9.8
 Release:	    %mkrel 1
 License:	    GPLv2+
 Group:		    Graphical desktop/KDE
-Source:		    http://download.berlios.de/%{name}/%{name}-%{version}.tar.bz2
+Source:		    http://fr2.rpmfind.net/linux/KDE/stable/yakuake/%{name}/src/%{name}/%{name}-%{version}.tar.bz2
 Url:		    http://www.kde-apps.org/content/show.php?content=29153
 BuildRequires:	kdelibs4-devel
 Requires:       konsole
