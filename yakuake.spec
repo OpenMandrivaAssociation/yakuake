@@ -33,8 +33,15 @@ Provides:	kde4-yakuake = 3.0.0
 Yakuake is a Quake-style terminal emulator based on KDE Konsole technology.
 
 %files -f %{name}.lang
-%doc AUTHORS ChangeLog README TODO NEWS KDE4FAQ
-%{_kde_bindir}/*
+%doc AUTHORS ChangeLog README TODO NEWS
+%dir %{_datadir}/%{name}
+%{_sysconfdir}/xdg/%{name}.knsrc
+%{_bindir}/%{name}
+%{_datadir}/appdata/org.kde.yakuake.appdata.xml
+%{_datadir}/applications/org.kde.yakuake.desktop
+%{_iconsdir}/hicolor/*/apps/%{name}.png
+%{_datadir}/knotifications5/%{name}.notifyrc
+%{_datadir}/%{name}/skins
 
 #--------------------------------------------------------------------
 
