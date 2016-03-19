@@ -1,15 +1,33 @@
 Summary:	Very powerful Quake style Konsole
 Name:		yakuake
-Version:	2.9.9
-Release:	2
+Version:	3.0.2
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Source0:	http://download.kde.org/stable/yakuake/%{version}/src/%{name}-%{version}.tar.xz
 Url:		http://www.kde-apps.org/content/show.php?content=29153
-BuildRequires:	kdelibs4-devel
+Source0:	http://download.kde.org/stable/yakuake/%{version}/src/%{name}-%{version}.tar.xz
+BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(KF5Archive)
+BuildRequires:	cmake(KF5Config)
+BuildRequires:	cmake(KF5CoreAddons)
+BuildRequires:	cmake(KF5Crash)
+BuildRequires:	cmake(KF5DBusAddons)
+BuildRequires:	cmake(KF5GlobalAccel)
+BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5IconThemes)
+BuildRequires:	cmake(KF5KIO)
+BuildRequires:	cmake(KF5NewStuff)
+BuildRequires:	cmake(KF5Notifications)
+BuildRequires:	cmake(KF5NotifyConfig)
+BuildRequires:	cmake(KF5Parts)
+BuildRequires:	cmake(KF5WidgetsAddons)
+BuildRequires:	cmake(KF5WindowSystem)
+BuildRequires:	pkgconfig(Qt5Core)
+BuildRequires:	pkgconfig(Qt5Widgets)
+BuildRequires:	pkgconfig(Qt5X11Extras)
 Requires:	konsole
-Obsoletes:	kde4-%name <= 2.9.2
-Provides:	kde4-%name = %version
+Obsoletes:	kde4-yakuake <= 2.9.2
+Provides:	kde4-yakuake = 3.0.0
 
 %description
 Yakuake is a Quake-style terminal emulator based on KDE Konsole technology.
@@ -17,22 +35,17 @@ Yakuake is a Quake-style terminal emulator based on KDE Konsole technology.
 %files -f %{name}.lang
 %doc AUTHORS ChangeLog README TODO NEWS KDE4FAQ
 %{_kde_bindir}/*
-%{_kde_datadir}/applications/kde4/*.desktop
-%{_kde_appsdir}/%{name}
-%{_kde_appsdir}/kconf_update/%{name}*
-%{_kde_configdir}/yakuake.knsrc
-%{_kde_iconsdir}/hicolor/*/apps/*
 
 #--------------------------------------------------------------------
 
-%prep 
-%setup -qn %{name}-%{version}
+%prep
+%setup -q
+%cmake_kde5
 
 %build
-%cmake_kde4
-%make
+%ninja -C build
 
 %install
-%makeinstall_std -C build
+%ninja_install -C build
 
 %find_lang %name
