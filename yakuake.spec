@@ -22,6 +22,7 @@ BuildRequires:	cmake(KF5NotifyConfig)
 BuildRequires:	cmake(KF5Parts)
 BuildRequires:	cmake(KF5WidgetsAddons)
 BuildRequires:	cmake(KF5WindowSystem)
+BuildRequires:	cmake(KF5Wayland)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	pkgconfig(Qt5X11Extras)
@@ -37,7 +38,7 @@ Yakuake is a Quake-style terminal emulator based on KDE Konsole technology.
 %dir %{_datadir}/%{name}
 %{_sysconfdir}/xdg/%{name}.knsrc
 %{_bindir}/%{name}
-%{_datadir}/appdata/org.kde.yakuake.appdata.xml
+%{_datadir}/metainfo/org.kde.yakuake.appdata.xml
 %{_datadir}/applications/org.kde.yakuake.desktop
 %{_iconsdir}/hicolor/*/apps/%{name}.png
 %{_datadir}/knotifications5/%{name}.notifyrc
