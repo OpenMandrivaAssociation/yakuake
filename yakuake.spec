@@ -26,6 +26,7 @@ BuildRequires:	cmake(KF5Wayland)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	pkgconfig(Qt5X11Extras)
+BuildRequires:  pkgconfig(Qt5Svg)
 Requires:	konsole
 Obsoletes:	kde4-yakuake <= 2.9.2
 Provides:	kde4-yakuake = 3.0.0
