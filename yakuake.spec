@@ -1,7 +1,7 @@
 Summary:	Very powerful Quake style Konsole
 Name:		yakuake
-Version:	3.0.5
-Release:	2
+Version:	19.11.90
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde-apps.org/content/show.php?content=29153
