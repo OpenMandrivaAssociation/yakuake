@@ -1,11 +1,11 @@
 Summary:	Very powerful Quake style Konsole
 Name:		yakuake
-Version:	19.12.1
+Version:	19.12.2
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde-apps.org/content/show.php?content=29153
-Source0:	http://download.kde.org/stable/yakuake/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	https://download.kde.org/stable/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5Archive)
 BuildRequires:	cmake(KF5Config)
