@@ -37,7 +37,6 @@ Yakuake is a Quake-style terminal emulator based on KDE Konsole technology.
 %files -f %{name}.lang
 %doc AUTHORS ChangeLog README.md TODO NEWS
 %dir %{_datadir}/%{name}
-#{_sysconfdir}/xdg/%{name}.knsrc
 %{_bindir}/%{name}
 %{_datadir}/metainfo/org.kde.yakuake.appdata.xml
 %{_datadir}/applications/org.kde.yakuake.desktop
@@ -45,6 +44,7 @@ Yakuake is a Quake-style terminal emulator based on KDE Konsole technology.
 %{_datadir}/knotifications5/%{name}.notifyrc
 %{_datadir}/%{name}/skins
 %{_datadir}/dbus-1/services/org.kde.yakuake.service
+%{_datadir}/knsrcfiles/yakuake.knsrc
 
 #--------------------------------------------------------------------
 
