@@ -1,6 +1,6 @@
 Summary:	Very powerful Quake style Konsole
 Name:		yakuake
-Version:	21.03.80
+Version:	21.04.1
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
