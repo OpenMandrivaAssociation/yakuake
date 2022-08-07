@@ -1,11 +1,11 @@
 Summary:	Very powerful Quake style Konsole
 Name:		yakuake
-Version:	22.04.3
+Version:	22.07.90
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde-apps.org/content/show.php?content=29153
-Source0:	https://download.kde.org/stable/release-service/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	https://download.kde.org/%([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5Archive)
 BuildRequires:	cmake(KF5Config)
