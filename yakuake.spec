@@ -1,6 +1,6 @@
 Summary:	Very powerful Quake style Konsole
 Name:		yakuake
-Version:	22.08.0
+Version:	22.08.1
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
