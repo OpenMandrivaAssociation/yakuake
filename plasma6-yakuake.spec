@@ -25,9 +25,7 @@ BuildRequires:	cmake(KF6WindowSystem)
 BuildRequires:	pkgconfig(Qt6Core)
 BuildRequires:	pkgconfig(Qt6Widgets)
 BuildRequires:  pkgconfig(Qt6Svg)
-Requires:	konsole
-Obsoletes:	kde4-yakuake <= 2.9.2
-Provides:	kde4-yakuake = 3.0.0
+Requires:	plasma6-konsole
 
 %description
 Yakuake is a Quake-style terminal emulator based on KDE Konsole technology.
