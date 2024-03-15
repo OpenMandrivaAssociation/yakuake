@@ -4,7 +4,7 @@
 Summary:	Very powerful Quake style Konsole
 Name:		plasma6-yakuake
 Version:	24.02.0
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde-apps.org/content/show.php?content=29163
