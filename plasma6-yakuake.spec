@@ -7,7 +7,7 @@ Version:	24.08.2
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://www.kde-apps.org/content/show.php?content=29163
+Url:		https://www.kde-apps.org/content/show.php?content=29163
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/utilities/yakuake/-/archive/%{gitbranch}/yakuake-%{gitbranchd}.tar.bz2#/yakuake-%{git}.tar.bz2
 %else
