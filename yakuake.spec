@@ -4,7 +4,7 @@ Version:	23.08.5
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://www.kde-apps.org/content/show.php?content=29153
+Url:		https://www.kde-apps.org/content/show.php?content=29153
 Source0:	https://download.kde.org/%([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5Archive)
