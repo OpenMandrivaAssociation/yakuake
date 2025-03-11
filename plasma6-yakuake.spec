@@ -33,6 +33,7 @@ BuildRequires:	cmake(KF6StatusNotifierItem)
 BuildRequires:	pkgconfig(Qt6Core)
 BuildRequires:	pkgconfig(Qt6Widgets)
 BuildRequires:  pkgconfig(Qt6Svg)
+BuildRequires:	pkgconfig(xkbcommon)
 Requires:	plasma6-konsole
 
 %description
