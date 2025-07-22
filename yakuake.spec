@@ -3,7 +3,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	Very powerful Quake style Konsole
 Name:		yakuake
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -34,7 +34,12 @@ BuildRequires:	pkgconfig(Qt6Core)
 BuildRequires:	pkgconfig(Qt6Widgets)
 BuildRequires:  pkgconfig(Qt6Svg)
 BuildRequires:	pkgconfig(xkbcommon)
-Requires:	plasma6-konsole
+Requires:	konsole >= 6.0
+
+%rename plasma6-yakuake
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %description
 Yakuake is a Quake-style terminal emulator based on KDE Konsole technology.
@@ -50,19 +55,3 @@ Yakuake is a Quake-style terminal emulator based on KDE Konsole technology.
 %{_datadir}/yakuake/skins
 %{_datadir}/dbus-1/services/org.kde.yakuake.service
 %{_datadir}/knsrcfiles/yakuake.knsrc
-
-#--------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n yakuake-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-
-%find_lang yakuake
