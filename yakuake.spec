@@ -35,6 +35,10 @@ BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(Qt6Svg)
 BuildRequires:	cmake(Qt6WaylandClient)
 BuildRequires:	pkgconfig(xkbcommon)
+BuildRequires:	pkgconfig(wayland-client)
+BuildRequires:	pkgconfig(wayland-server)
+BuildRequires:	pkgconfig(wayland-cursor)
+BuildRequires:	pkgconfig(wayland-egl)
 Requires:	konsole >= 6.0
 
 %rename plasma6-yakuake
