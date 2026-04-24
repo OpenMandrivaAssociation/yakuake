@@ -40,6 +40,7 @@ BuildRequires:	pkgconfig(wayland-client)
 BuildRequires:	pkgconfig(wayland-server)
 BuildRequires:	pkgconfig(wayland-cursor)
 BuildRequires:	pkgconfig(wayland-egl)
+BuildRequires:	pkgconfig(xcb-util)
 Requires:	konsole >= 6.0
 
 %rename plasma6-yakuake
