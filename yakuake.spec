@@ -30,9 +30,10 @@ BuildRequires:	cmake(KF6Parts)
 BuildRequires:	cmake(KF6WidgetsAddons)
 BuildRequires:	cmake(KF6WindowSystem)
 BuildRequires:	cmake(KF6StatusNotifierItem)
-BuildRequires:	pkgconfig(Qt6Core)
-BuildRequires:	pkgconfig(Qt6Widgets)
-BuildRequires:  pkgconfig(Qt6Svg)
+BuildRequires:	cmake(Qt6Core)
+BuildRequires:	cmake(Qt6Widgets)
+BuildRequires:	cmake(Qt6Svg)
+BuildRequires:	cmake(Qt6WaylandClient)
 BuildRequires:	pkgconfig(xkbcommon)
 Requires:	konsole >= 6.0
 
